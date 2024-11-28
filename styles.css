@@ -1,4 +1,4 @@
-/* Global Reset */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,35 +7,33 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #111; /* Dark Theme */
+  background: #111;
   color: #eee;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* Header Section */
+/* Header Styles */
 .header {
   background: #222;
   color: white;
   padding: 15px 20px;
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 15px;
 }
 
 .nav a {
   color: #aaa;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .nav a:hover {
@@ -45,8 +43,9 @@ body {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: url('processupdate.png') center/cover no-repeat; /* Add your hero background image */
+  background: url('processupdate.png') center/cover no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -58,30 +57,23 @@ body {
 }
 
 .hero p {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 20px 0;
 }
 
 .hero .btn {
+  padding: 10px 20px;
   background: #ff6600;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .hero .btn:hover {
   background: #cc5200;
 }
 
-/* Intro Section */
-.intro {
-  text-align: center;
-  padding: 40px 20px;
-  background: #222;
-}
-
-/* Section Styling */
+/* Section Styles */
 .section {
   padding: 40px 20px;
   background: #222;
@@ -99,7 +91,6 @@ body {
   background: #333;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .images {
@@ -109,15 +100,14 @@ body {
 }
 
 .images img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
   border-radius: 10px;
 }
 
 /* Footer */
 .footer {
-  background: #222;
-  color: #aaa;
   text-align: center;
   padding: 20px;
+  background: #222;
+  color: #aaa;
 }
