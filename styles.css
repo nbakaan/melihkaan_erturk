@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #111;
-  color: #eee;
+  background: #111; /* Dark theme background */
+  color: #eee; /* Light text color */
   line-height: 1.6;
 }
 
@@ -23,6 +23,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .nav ul {
@@ -34,6 +35,8 @@ body {
 .nav a {
   color: #aaa;
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
@@ -43,7 +46,7 @@ body {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: url('processupdate.png') center/cover no-repeat;
+  background: url('Kaan_3D Stager_3Objects-Camera 2.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,54 +57,146 @@ body {
 .hero h1 {
   font-size: 3rem;
   color: white;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin: 20px 0;
+  margin: 70px 0;
+  max-width: 800px;
+  line-height: 1.8;
+  color: #ddd;
+  .hero p {
+    text-align: center; /* Center-align the paragraph text */
+    font-size: 1.2rem; /* Adjust font size for readability */
+    color: #ddd; /* Adjust text color for better visibility */
+    line-height: 1.8; /* Add spacing between lines */
+    max-width: 800px; /* Restrict the width for better layout */
+    margin-left: auto; /* Center the paragraph within the container */
+    margin-right: auto;
+  }
+  
+  
 }
 
+
+
+
 .hero .btn {
-  padding: 10px 20px;
-  background: #ff6600;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff6600, #ff3300);
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .hero .btn:hover {
-  background: #cc5200;
+  background: linear-gradient(90deg, #ff3300, #cc0000);
+  transform: translateY(-2px);
 }
 
 /* Section Styles */
 .section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   background: #222;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .content {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .card {
-  flex: 1 1 300px;
+  flex: 0 0 100%;
   background: #333;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
 }
 
 .images {
-  flex: 1 1 300px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .images img {
-  width: 100%;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Welcome Section */
+.intro {
+  text-align: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle, #333, #222);
+  animation: background-animation 10s infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background: radial-gradient(circle, #333, #222);
+  }
+  50% {
+    background: radial-gradient(circle, #555, #111);
+  }
+  100% {
+    background: radial-gradient(circle, #333, #222);
+  }
+}
+
+.intro h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ddd;
 }
 
 /* Footer */
@@ -110,4 +205,14 @@ body {
   padding: 20px;
   background: #222;
   color: #aaa;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
